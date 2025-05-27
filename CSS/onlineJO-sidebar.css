@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+:root{
+    /* COLORS */
+    --text-color: black;
+    --box1-color: #2BCEFE;
+    --box2-color: #45FF86;
+    --box3-color: #9AFC44;
+    --box4-color: #FFF838;
+    --box5-color: #FF9D35;
+
+    /* Transitions */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    opacity: 1;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.275rem;
+    color: var(--bs-emphasis-color);
+}
+
+/* Layout for admin dashboard skeleton */
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    background: var(--bs-dark);
+    transition: all 0.35s ease-in-out;
+    position: fixed;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    width: calc(100% - 264px);
+    background: #F8F9FA;
+    margin-left: auto; 
+}
+
+.navbar{
+    position: fixed; /* Fixed position */
+    top: 0; /* Position at the top of the viewport */
+    width: calc(100%); /* Adjusted width */
+    z-index: 4;
+    background-color: #F8F9FA;
+    border-bottom: 1px solid black;
+}
+
+.footer{
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Position at the top of the viewport */
+    width: calc(100%); /* Adjusted width */
+    z-index: 4;
+    background-color: #F8F9FA;
+    border-top: 1px solid white;
+}
+
+/* Sidebar Elements Style */
+
+.sidebar-logo {
+    padding: 1.15rem;
+}
+
+.container {
+    display: flex; 
+    align-items: center; 
+}
+
+.img-logo {
+    margin-right: 1px;
+}
+
+#logo-img{
+    display: flex;
+    align-items: center;
+    width: 3.2rem;
+    height: 4rem;
+}
+
+.for-logout {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    align-items: flex-end;
+    padding-right: 280px;
+    transition: none;
+}
+
+
+
+.namedisplay {
+    margin-bottom: 5px; 
+}
+
+.sidebar-logo a {
+    color: #e9ecef;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebar-header {
+    color: #e9ecef;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #e9ecef;
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-expand .navbar-nav {
+    margin-left: auto;
+}
+
+.content {
+    max-width: 100vw;
+    width: 100vw;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+@media (min-width:768px) {
+    .content {
+        max-width: auto;
+        width: auto;
+    }
+}
+
+.card {
+    box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
+    margin-bottom: 24px;
+}
+
+.illustration {
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-emphasis-color);
+}
+
+.illustration-img {
+    max-width: 150px;
+    width: 100%;
+}
+
+/* Sidebar Toggle */
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+/* Footer and Nav */
+
+@media (max-width:767.98px) {
+
+    .js-sidebar {
+        margin-left: -264px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+
+    .navbar,
+    footer {
+        width: 100vw;
+    }
+}
+
+#logout {
+    text-decoration: none;
+    border: none;
+    color: blue;
+    background-color: transparent;
+    text-align: right;
+    cursor: pointer;
+}
+
+.h-100{
+    background-color: purple;
+}
+
+aside .h-100 ul li a .active{
+    text-decoration: underline;
+}
+
+aside .h-100 ul li a{
+    text-decoration: none;
+}
+
+aside{
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    
+}
